@@ -1,0 +1,123 @@
+/* assets/css/style.css */
+body {
+    background: #f4f6f9;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Cards de status */
+.card-stat {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.07);
+    transition: transform .15s;
+}
+.card-stat:hover { transform: translateY(-3px); }
+.card-stat .icon-box {
+    width: 52px; height: 52px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem;
+}
+
+/* Tabelas */
+.table th { background: #f8f9fa; font-weight: 600; }
+.table td { vertical-align: middle; }
+
+/* Badges de status OS */
+.badge-aberta        { background:#0d6efd; }
+.badge-em_andamento  { background:#ffc107; color:#000; }
+.badge-aguardando_peca { background:#fd7e14; }
+.badge-concluida     { background:#198754; }
+.badge-cancelada     { background:#6c757d; }
+
+/* Galeria de fotos */
+.foto-card img {
+    width: 100%; height: 180px;
+    object-fit: cover; border-radius: 8px;
+    cursor: pointer;
+    transition: transform .2s;
+}
+.foto-card img:hover { transform: scale(1.03); }
+
+/* Conta corrente */
+.valor-credito { color: #198754; font-weight: 600; }
+.valor-debito  { color: #dc3545; font-weight: 600; }
+.saldo-positivo { color: #198754; }
+.saldo-negativo { color: #dc3545; }
+
+/* Navbar active */
+.navbar .nav-link.active { border-bottom: 2px solid rgba(255,255,255,.8); }
+
+/* Modal de foto */
+#modalFoto .modal-body { background:#000; text-align:center; }
+#modalFoto img { max-height: 80vh; border-radius: 4px; }
+
+/* ───────── v8 ───────── */
+/* Botão de foto na linha do item */
+.btn-foto{border:1px solid #dee2e6;background:#fff;color:#adb5bd;border-radius:6px;padding:1px 6px;font-size:.8rem;line-height:1.4;position:relative}
+.btn-foto:hover{border-color:#0d6efd;color:#0d6efd}
+.btn-foto.tem{color:#0d6efd;border-color:#9ec5fe;background:#f1f6ff}
+.btn-foto .qtd{position:absolute;top:-7px;right:-7px;background:#0d6efd;color:#fff;border-radius:10px;font-size:.6rem;padding:0 4px;line-height:1.3}
+.btn-foto.estoque{color:#6f42c1;border-color:#d5c6f3;background:#f7f3fe}
+.item-thumb{width:34px;height:34px;object-fit:cover;border-radius:6px;cursor:pointer;border:1px solid #eee}
+
+/* Afazeres */
+.afazer{display:flex;align-items:flex-start;gap:.75rem;padding:.65rem 1rem;border-bottom:1px solid #f1f3f5}
+.afazer:last-child{border-bottom:0}
+.afazer .chk{font-size:1.25rem;line-height:1}
+.afazer.feito .txt{text-decoration:line-through;color:#adb5bd}
+.afazer .meta{font-size:.72rem;color:#adb5bd}
+.progresso-os{height:8px;border-radius:6px;background:#e9ecef;overflow:hidden}
+.progresso-os > div{height:100%;background:linear-gradient(90deg,#198754,#20c997)}
+
+/* Galerias */
+.thumb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:.6rem}
+.thumb-grid .th{position:relative;border-radius:8px;overflow:hidden;background:#f1f3f5;aspect-ratio:4/3}
+.thumb-grid .th img{width:100%;height:100%;object-fit:cover;cursor:pointer;transition:transform .2s}
+.thumb-grid .th img:hover{transform:scale(1.04)}
+.thumb-grid .th .tag{position:absolute;left:4px;bottom:4px;right:4px;font-size:.62rem;background:rgba(0,0,0,.6);color:#fff;border-radius:4px;padding:1px 5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.thumb-grid .th .st{position:absolute;top:4px;left:4px}
+.foto-sel{position:relative;cursor:pointer}
+.foto-sel input{position:absolute;top:6px;left:6px;width:18px;height:18px;z-index:2}
+.foto-sel img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:8px;border:3px solid transparent}
+.foto-sel input:checked + img{border-color:#0d6efd}
+
+/* Foto do carro */
+.carro-capa{border-radius:12px;overflow:hidden;position:relative;background:#111;aspect-ratio:16/9}
+.carro-capa img{width:100%;height:100%;object-fit:cover}
+.carro-capa .info{position:absolute;left:0;right:0;bottom:0;padding:1rem;background:linear-gradient(transparent,rgba(0,0,0,.8));color:#fff}
+.carro-capa.vazia{display:flex;align-items:center;justify-content:center;color:#666;flex-direction:column}
+.carro-mini{width:64px;height:44px;object-fit:cover;border-radius:6px;border:1px solid #ddd}
+
+/* Central de pendências (dashboard admin) */
+.pend-tile{border:0;border-radius:12px;padding:14px 16px;display:flex;gap:12px;align-items:center;text-decoration:none;color:inherit;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.06);transition:transform .15s}
+.pend-tile:hover{transform:translateY(-2px);color:inherit}
+.pend-tile .ic{width:44px;height:44px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.pend-tile .n{font-size:1.5rem;font-weight:700;line-height:1}
+.pend-tile .l{font-size:.78rem;color:#6c757d}
+.pend-tile.zero{opacity:.55}
+.pend-bloco .card-header{display:flex;justify-content:space-between;align-items:center}
+.pend-os-fotos{display:flex;gap:6px;flex-wrap:wrap}
+.pend-os-fotos .pf{position:relative;width:86px}
+.pend-os-fotos .pf img{width:86px;height:64px;object-fit:cover;border-radius:6px;cursor:pointer}
+.pend-os-fotos .pf .acts{display:flex;gap:3px;margin-top:3px}
+.pend-os-fotos .pf .acts button{flex:1;padding:0;font-size:.75rem}
+
+/* Corridas */
+.rally-hero{background:linear-gradient(135deg,#111 0%,#2b0a0a 100%);color:#fff;border-radius:14px;padding:22px 24px;position:relative;overflow:hidden}
+.rally-hero:after{content:"";position:absolute;right:-40px;top:-40px;width:220px;height:220px;background:repeating-conic-gradient(rgba(255,255,255,.06) 0 25%,transparent 0 50%) 0 0/28px 28px;transform:rotate(12deg)}
+.rally-hero .contagem{font-size:2rem;font-weight:800;line-height:1}
+.rally-status{font-size:.7rem;text-transform:uppercase;letter-spacing:.5px}
+.timeline-dia{margin-bottom:1.25rem}
+.timeline-dia .dia{font-weight:700;font-size:.85rem;color:#dc3545;text-transform:uppercase;letter-spacing:.4px;margin-bottom:.4rem}
+.timeline-ev{display:flex;gap:12px;padding:.55rem 0;border-left:2px solid #e9ecef;margin-left:6px;padding-left:16px;position:relative}
+.timeline-ev:before{content:"";position:absolute;left:-7px;top:.85rem;width:12px;height:12px;border-radius:50%;background:#fff;border:3px solid var(--cor,#6c757d)}
+.timeline-ev .hora{width:88px;flex-shrink:0;font-weight:600;font-size:.85rem}
+.timeline-ev .tit{font-weight:600}
+.pessoa-chip{display:inline-flex;align-items:center;gap:6px;background:#f1f3f5;border-radius:20px;padding:3px 10px 3px 3px;font-size:.8rem;margin:0 4px 4px 0}
+.pessoa-chip .av{width:24px;height:24px;border-radius:50%;background:#dc3545;color:#fff;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700}
+.participante-card{border:1px solid #eee;border-radius:10px;overflow:hidden;background:#fff}
+.participante-card .foto{aspect-ratio:16/9;background:#222;position:relative}
+.participante-card .foto img{width:100%;height:100%;object-fit:cover}
+.participante-card .num{position:absolute;top:8px;left:8px;background:#dc3545;color:#fff;font-weight:800;border-radius:6px;padding:2px 8px;font-size:.9rem}
+.table td.text-end{white-space:nowrap}

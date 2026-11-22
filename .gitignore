@@ -1,0 +1,23 @@
+# Segredos: o config.php real tem a senha do banco
+config.php
+.env
+*.env
+
+# Arquivos enviados pelos usuários (comprovantes, fotos), mantendo só a proteção da pasta
+uploads/*
+!uploads/.htaccess
+
+# Dumps e backups de banco
+*.sql
+*.sql.gz
+*.dump
+*.bak
+*.zip
+*.tar.gz
+backup*/
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
